@@ -7,7 +7,7 @@ const includedLabel = document.getElementById('included-label');
 const notIncludedLabel = document.getElementById('not-included-label');
 function check() {
   const text = textE.value;
-  const words = wordsE.value.split(' ');
+  const words = wordsE.value.split(/\s+/);
   const included = [];
   const notIncluded = [];
   words.forEach(word => {
