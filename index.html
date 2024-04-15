@@ -4,29 +4,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Words inclusion checker</title>
+  <title>Word inclusion checker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Tilt+Neon&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" <link href="font.css" rel="stylesheet" type="text/css" />
   <link href="style.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
-  <h1>Words inclusion checker</h1>
-  <h2>Text to check</h2>
-  <textarea id="text" rows="10"></textarea>
-  <br>
-  <h2>Enter words to check for</h2>
-  <p>Separate with spaces</p>
-  <textarea id="words" rows="10" cols="50"></textarea>
-  <br>
-  <button onclick="check()">Check</button>
-  <br>
-  <div id="result">
-    <p id="included-label">Included: </p>
-    <ul id="included" class="result"></ul>
-    <br>
-    <p id="not-included-label">Not included: </p>
-    <ul id="not-included" class="result"></ul>
+  <div class="main">
+    <h1>Word inclusion checker</h1>
+    <table id="input-area">
+      <tr>
+        <td class="wide">
+          <h2>Text to check</h2>
+          <textarea id="text"></textarea>
+        </td>
+        <td class="side">
+          <h2>Words to check for</h2>
+          <textarea id="words"></textarea>
+          <br>
+          <button onclick="check()">Check</button>
+        </td>
+      </tr>
+    </table>
+    <table id="result">
+      <tr>
+        <td class="half">
+          <span id="included-label">Included: </span>
+          <span class="right">
+            <span onclick="copy(itc, this)">
+              <img src="copy.svg">
+              Copy
+            </span>
+            <span onclick="download(itc, 'included.txt', this)">
+              <img src="download.svg">
+              Download
+            </span>
+          </span>
+          <br>
+          <ul id="included" class="result"></ul>
+        </td>
+        <td class="sep"></td>
+        <td class="half">
+          <span id="not-included-label">Not included: </span>
+          <span class="right">
+            <span onclick="copy(nitc, this)">
+              <img src="copy.svg">
+              Copy
+            </span>
+            <span onclick="download(nitc, 'not-included.txt', this)">
+              <img src="download.svg">
+              Download
+            </span>
+          </span>
+          <br>
+          <ul id="not-included" class="result"></ul>
+        </td>
+      </tr>
+    </table>
   </div>
   <script src="script.js"></script>
+  <script src="check.js"></script>
+  <script src="export.js"></script>
+  <div class="footer">
+    <center>
+      <p>Made by <a href="https://github.com/bananabake">bananabake</a></p>
+    </center>
+  </div>
 </body>
 
 </html>

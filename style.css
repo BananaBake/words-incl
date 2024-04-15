@@ -3,16 +3,85 @@ html {
   width: 100vw;
 }
 
-textarea {
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fcdc3d
+}
+
+header {}
+
+.main {
+  padding: 0.5em;
+  background-color: #72befc;
+}
+
+table {
   width: 100%;
 }
 
-#result {
-  display: none;
+td {
+  padding: 0.5em;
+  vertical-align: top;
+}
+
+textarea {
+  width: 100%;
+  background-color: #a2cff5
 }
 
 button {
   margin-top: 10px;
   font-size: 2em;
   font-family: inherit;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  background-color: #1a69e8;
+  color: white;
+  padding: 0.25em;
+}
+
+.wide {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+#text {
+  height: 60vh;
+}
+
+
+#words {
+  width: 23vw;
+  height: calc(60vh - (3.75em + 10px));
+}
+
+span img {
+  height: 1em;
+}
+
+.sep {
+  padding: 0;
+  border: 0.5px solid #8cb2cf;
+  width: 0.5px;
+}
+
+.right {
+  float: right;
+}
+
+.right span {
+  margin-left: 0.5em;
+}
+
+#result {
+  display: none;
+}
+
+.footer {
+  padding: 0.5em;
 }
