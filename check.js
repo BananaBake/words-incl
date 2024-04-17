@@ -19,8 +19,8 @@ function check() {
         }
     });
     duplicates = [...new Set(duplicates)];
-    itc = included.join('\n');
-    nitc = notIncluded.join('\n');
+    itc = included.join(sep);
+    nitc = notIncluded.join(sep);
     includedLabel.textContent = `Included: (${included.length})`;
     notIncludedLabel.textContent = `Not included: (${notIncluded.length})`;
     includedE.innerHTML = "";

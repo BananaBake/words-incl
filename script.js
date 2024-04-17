@@ -8,3 +8,4 @@ const notIncludedLabel = document.getElementById('not-included-label');
 let itc = "";
 let nitc = "";
 let duplicates;
+let sep = " ";
